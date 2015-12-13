@@ -27,14 +27,14 @@ def isInteger(str):
 path = "/home/iah/csv_file_analysis/test.csv"
 delimiter = '"'
 separater = ","
-nbrCol = nbrColumn(path, delimiter, separater)
+#nbrCol = nbrColumn(path, delimiter, separater)
 
 #Parametres de sortie
 listWrongLines =[]
 
 #------------------------------------------------Main---------------------------------------------------
 start_time = time.time() #Tmp
-
+"""
 file = open(path, 'r')
 i = 1;
 while 1:
@@ -47,8 +47,8 @@ while 1:
     if(nbrSep != nbrCol) :
      listWrongLines.append(i)
 
-
+"""
+print "coucou"
 print("--- %s seconds ---" % (time.time() - start_time))#Tmp
-print nbrColumn(path, delimiter, separater)
-
-print listWrongLines
+#print nbrColumn(path, delimiter, separater)
+#print listWrongLines
