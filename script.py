@@ -1,6 +1,14 @@
 import time
 import re
 
+#Déclaration 
+class VarType(object):
+    def __init__(self, name, regex):
+        self.regex=re.compile(regex)
+        self.name=name
+    def isPattern(self, str):
+      return bool(self.regex.match(str))
+
 #Renvoie le nombre de separateur 
 def nbrSeparater(line, delimiter, separater):
     cpt = 1;
@@ -54,17 +62,10 @@ print("--- %s seconds ---" % (time.time() - start_time))#Tmp
 #print nbrColumn(path, delimiter, separater)
 #print listWrongLines
 
-class VarType(object):
-    def __init__(self, name, regex):
-        self.regex=re.compile(regex)
-        self.name=name
-    def isPattern(self, str):
-      return bool(self.regex.match(str))
+
 
 var=VarType('nombre','^[0-9]*$')
-print var.regex
-print var.name
-print var
+
 
 print var.isPattern("llg51545")
 
@@ -72,8 +73,13 @@ listVarType = []
 listVarType.append(var)
 listVarType.append(var)
 listVarType.append(var)
-print listVarType[0].name
+
 
 countVect= [0] * len(listVarType)
-print countVect
 
+class analyse(object):
+    def __init__(self, nbrColumn, listVarType):
+        countVect= [0] * len(listVarType)
+        self.name=name
+    def isPattern(self, str):
+      return bool(self.regex.match(str))
