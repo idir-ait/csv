@@ -1,7 +1,8 @@
 import time
 import re
 
-#Déclaration 
+
+
 class VarType(object):
     def __init__(self, name, regex):
         self.regex=re.compile(regex)
@@ -79,7 +80,13 @@ countVect= [0] * len(listVarType)
 
 class analyse(object):
     def __init__(self, nbrColumn, listVarType):
-        countVect= [0] * len(listVarType)
-        self.name=name
+        self.mat = [] 
+        for i in range(1, nbrColumn+1):
+          self.mat.append([0] * len(listVarType))
+        print self.mat
     def isPattern(self, str):
       return bool(self.regex.match(str))
+
+t = analyse(5, listVarType)
+
+
