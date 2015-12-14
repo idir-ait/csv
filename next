@@ -1,0 +1,3 @@
+Detection du separateur 
+  calculer les frequance d'aparition des caractaire pour chaque ligne 
+  prendre le caractaire qui a des frequance semblable sur toutes les ligne du fichier
